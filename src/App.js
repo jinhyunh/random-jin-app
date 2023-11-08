@@ -1,20 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter } from "react-router-dom";
 import { Routes, Route, Navigate } from "react-router";
-//import <APP NAME> from './wherever it actually is';
+import Jinapps from './jin-apps';
+import TypeCalculator from './type-calculator';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        test text
-      </header>
       <BrowserRouter>
         <div className="container">
           <Routes>
-            <Route path="/" element={<Navigate to="/jinapp" />} />
-            {/* <Route path="/jinapp/*" element={< />} /> */}
+            <Route path="/" element={<Navigate to="/pokemon" />} />
+            <Route path="/jinapp/*" element={<Jinapps/>} />
+            <Route path="/pokemon/*" element={<TypeCalculator/>} />
           </Routes>
         </div>
       </BrowserRouter>
